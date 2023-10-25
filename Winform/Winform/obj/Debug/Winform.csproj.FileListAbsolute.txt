@@ -11,3 +11,16 @@ C:\DoAnWinform\Winform\Winform\obj\Debug\Winform.fLogin.resources
 C:\DoAnWinform\Winform\Winform\obj\Debug\Winform.fTableManager.resources
 C:\DoAnWinform\Winform\Winform\obj\Debug\Winform.fAccountProfile.resources
 C:\DoAnWinform\Winform\Winform\obj\Debug\Winform.fAdmin.resources
+C:\Users\win10\OneDrive\Documents\github\Winform_QLyQuanAn\DoAnWinform\Winform\Winform\obj\Debug\Winform.csproj.AssemblyReference.cache
+C:\Users\win10\OneDrive\Documents\github\Winform_QLyQuanAn\DoAnWinform\Winform\Winform\obj\Debug\Winform.fAccountProfile.resources
+C:\Users\win10\OneDrive\Documents\github\Winform_QLyQuanAn\DoAnWinform\Winform\Winform\obj\Debug\Winform.fAdmin.resources
+C:\Users\win10\OneDrive\Documents\github\Winform_QLyQuanAn\DoAnWinform\Winform\Winform\obj\Debug\Winform.fLogin.resources
+C:\Users\win10\OneDrive\Documents\github\Winform_QLyQuanAn\DoAnWinform\Winform\Winform\obj\Debug\Winform.fTableManager.resources
+C:\Users\win10\OneDrive\Documents\github\Winform_QLyQuanAn\DoAnWinform\Winform\Winform\obj\Debug\Winform.Properties.Resources.resources
+C:\Users\win10\OneDrive\Documents\github\Winform_QLyQuanAn\DoAnWinform\Winform\Winform\obj\Debug\Winform.csproj.GenerateResource.cache
+C:\Users\win10\OneDrive\Documents\github\Winform_QLyQuanAn\DoAnWinform\Winform\Winform\obj\Debug\Winform.csproj.CoreCompileInputs.cache
+C:\Users\win10\OneDrive\Documents\github\Winform_QLyQuanAn\DoAnWinform\Winform\Winform\obj\Debug\Winform.exe
+C:\Users\win10\OneDrive\Documents\github\Winform_QLyQuanAn\DoAnWinform\Winform\Winform\obj\Debug\Winform.pdb
+C:\Users\win10\OneDrive\Documents\github\Winform_QLyQuanAn\DoAnWinform\Winform\Winform\bin\Debug\Winform.exe.config
+C:\Users\win10\OneDrive\Documents\github\Winform_QLyQuanAn\DoAnWinform\Winform\Winform\bin\Debug\Winform.exe
+C:\Users\win10\OneDrive\Documents\github\Winform_QLyQuanAn\DoAnWinform\Winform\Winform\bin\Debug\Winform.pdb

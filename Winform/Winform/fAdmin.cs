@@ -16,8 +16,25 @@ namespace Winform
         public fAdmin()
         {
             InitializeComponent();
-           
+            LoadDateTimePickerBill();
+            LoadListBillByDate(dtpkFormDate.Value, dtpkTodate.Value);
+        }
+        void LoadDateTimePickerBill()
+        {
+            DateTime today = DateTime.Now;
+            dtpkFormDate.Value = new DateTime(today.Year, today.Month, 1);
+            dtpkTodate.Value = dtpkFormDate.Value.AddMonths(1).AddDays(-1);
+        }
+        void LoadListBillByDate(DateTime checkIn, DateTime checkOut)
+        {
+            dtgvBill.DataSource = BillDAO.Instance.GetListBillByDate(checkIn, checkOut);
         }
 
+        private void btnEditBill_Click(object sender, EventArgs e)
+        {
+            LoadListBillByDate(dtpkFormDate.Value, dtpkTodate.Value);
+        }
+
+ 
     }
 }

@@ -96,6 +96,7 @@
             this.btnFood.TabIndex = 2;
             this.btnFood.Text = "Thêm món";
             this.btnFood.UseVisualStyleBackColor = true;
+            this.btnFood.Click += new System.EventHandler(this.btnFood_Click);
             // 
             // cbFood
             // 
@@ -126,6 +127,7 @@
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(138, 21);
             this.cbCategory.TabIndex = 0;
+            this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged_1);
             // 
             // txbTotalPrice
             // 
@@ -155,6 +157,7 @@
             this.btnSwitchtable.TabIndex = 6;
             this.btnSwitchtable.Text = "Chuyển bàn";
             this.btnSwitchtable.UseVisualStyleBackColor = true;
+            this.btnSwitchtable.Click += new System.EventHandler(this.btnSwitchtable_Click_1);
             // 
             // nmDiscount
             // 
@@ -184,6 +187,7 @@
             this.btnCheck.TabIndex = 3;
             this.btnCheck.Text = "Thanh toán";
             this.btnCheck.UseVisualStyleBackColor = true;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
             // panel3
             // 

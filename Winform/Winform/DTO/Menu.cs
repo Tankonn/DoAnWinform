@@ -9,7 +9,7 @@ namespace Winform.DTO
 {
     public class Menu
     {
-        public Menu(string foodName, int count, float price, float totalPrice = 0) 
+        public Menu(string foodName, int count, float price, float totalPrice = 0)
         {
             this.FoodName = foodName;
             this.Count = count;
@@ -23,7 +23,7 @@ namespace Winform.DTO
             this.Price = (float)Convert.ToDouble(row["price"].ToString());
             this.TotalPrice = (float)Convert.ToDouble(row["totalPrice"].ToString());
         }
-        
+
 
         private float totalPrice;
         public float TotalPrice
@@ -39,15 +39,15 @@ namespace Winform.DTO
         }
 
         private int count;
-        public int Count 
+        public int Count
         {
-            get { return count; } 
+            get { return count; }
             set { count = value; }
         }
 
         private string foodName;
-        public string FoodName 
-        { 
+        public string FoodName
+        {
             get { return foodName; }
             set { foodName = value; }
         }

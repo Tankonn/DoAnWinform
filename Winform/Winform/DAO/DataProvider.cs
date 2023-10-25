@@ -11,7 +11,7 @@ namespace Winform.DAO
     //@"Data Source=tuananh;Initial Catalog = QlyQuanAn; Integrated Security = True";
     public class DataProvider
     {
-        private static DataProvider instance; 
+        private static DataProvider instance;
 
         public static DataProvider Instance
         {
@@ -21,7 +21,7 @@ namespace Winform.DAO
 
         private DataProvider() { }
 
-        private string connectionSTR = @"Data Source=tuananh;Initial Catalog = QlyQuanAn; Integrated Security = True";
+        private string connectionSTR = @"Data Source=.;Initial Catalog = QlyQuanAn; Integrated Security = True";
 
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
@@ -52,7 +52,7 @@ namespace Winform.DAO
 
                 connection.Close();
             }
-           return data;
+            return data;
         }
 
         public int ExecuteNonQuery(string query, object[] parameter = null)
