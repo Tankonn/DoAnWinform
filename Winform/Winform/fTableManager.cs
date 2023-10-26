@@ -18,6 +18,7 @@ namespace Winform
     public partial class fTableManager : Form
     {
         private Account loginAccount;
+
         public Account LoginAccount
         {
             get { return loginAccount; }
@@ -26,17 +27,20 @@ namespace Winform
         public fTableManager(Account acc)
         {
             InitializeComponent();
-            this.loginAccount = acc;
+
+            this.LoginAccount = acc;
+
             LoadTable();
             LoadCategory();
             LoadConboboxTable(cbSwitchtable);
         }
 
+
         #region Method
         void ChangeAccount(int type)
         {
-            addminToolStripMenuItem.Enabled = type == 1;
-            thôngTinCáToolStripMenuItem.Text += " (" + LoginAccount.DisplayName + ")";
+            adminToolStripMenuItem.Enabled = type == 1;
+            thôngTinTàiToolStripMenuItem.Text += " (" + LoginAccount.DisplayName + ")";
         }
         void LoadCategory()
         {
@@ -119,20 +123,48 @@ namespace Winform
 
         private void thôngTinCáToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fAccountProfile f = new fAccountProfile();
+            fAccountProfile f = new fAccountProfile(LoginAccount);
+            f.UpdateAccount += f_UpdateAccount;
             f.ShowDialog();
         }
+        void f_UpdateAccount(object sender, AccountEvent e)
+        {
+            thôngTinTàiToolStripMenuItem.Text = "Thông tin tài khoản (" + e.Acc.DisplayName + ")";
+        }
 
-        private void addminToolStripMenuItem_Click(object sender, EventArgs e)
+         void adminToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fAdmin f = new fAdmin();
+            f.InsertFood += F_InsertFood;
+            f.DeleteFood += F_DeleteFood;
+            f.UpdateFood += F_UpdateFood;
             f.ShowDialog();
         }
+
+        private void F_DeleteFood(object sender, EventArgs e)
+        {
+            loadFoodListByCategoryID((cbCategory.SelectedItem as Category).ID);
+            if (lsvBill.Tag != null)
+                ShowBill((lsvBill.Tag as Table).ID);
+            LoadTable();
+        }
+
+        private void F_InsertFood(object sender, EventArgs e)
+        {
+            loadFoodListByCategoryID((cbCategory.SelectedItem as Category).ID);
+            if (lsvBill.Tag != null)
+                ShowBill((lsvBill.Tag as Table).ID);
+        }
         #endregion
+        void F_UpdateFood(object sender, EventArgs e)
+        {
+            loadFoodListByCategoryID((cbCategory.SelectedItem as Category).ID);
+            if (lsvBill.Tag != null)
+                ShowBill((lsvBill.Tag as Table).ID);
+        }
 
-  
 
-        
+
 
         private void btnSwitchtable_Click(object sender, EventArgs e)
         {

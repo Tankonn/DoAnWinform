@@ -50,7 +50,7 @@
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinCáToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinTàiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             ((System.ComponentModel.ISupportInitialize)(this.nmFoodCount)).BeginInit();
             this.panel4.SuspendLayout();
@@ -272,18 +272,18 @@
             this.thôngTinTàiToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.thôngTinTàiToolStripMenuItem.Text = "Thông tin tài khoản";
             // 
-            // addminToolStripMenuItem
+            // adminToolStripMenuItem
             // 
-            this.addminToolStripMenuItem.Name = "addminToolStripMenuItem";
-            this.addminToolStripMenuItem.Size = new System.Drawing.Size(55, 22);
-            this.addminToolStripMenuItem.Text = "Admin";
-            this.addminToolStripMenuItem.Click += new System.EventHandler(this.addminToolStripMenuItem_Click);
+            this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
+            this.adminToolStripMenuItem.Size = new System.Drawing.Size(55, 22);
+            this.adminToolStripMenuItem.Text = "Admin";
+            this.adminToolStripMenuItem.Click += new System.EventHandler(this.adminToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addminToolStripMenuItem,
+            this.adminToolStripMenuItem,
             this.thôngTinTàiToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -342,7 +342,7 @@
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thôngTinCáToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thôngTinTàiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addminToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }

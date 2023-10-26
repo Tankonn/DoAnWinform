@@ -167,7 +167,6 @@
             this.txbDisplayname.Location = new System.Drawing.Point(156, 16);
             this.txbDisplayname.Margin = new System.Windows.Forms.Padding(2);
             this.txbDisplayname.Name = "txbDisplayname";
-            this.txbDisplayname.ReadOnly = true;
             this.txbDisplayname.Size = new System.Drawing.Size(291, 20);
             this.txbDisplayname.TabIndex = 1;
             // 
@@ -191,6 +190,7 @@
             this.btnUpdate.TabIndex = 34;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // panel2
             // 

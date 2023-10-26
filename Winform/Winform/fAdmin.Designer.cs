@@ -719,6 +719,7 @@
             this.txbFoodId.ReadOnly = true;
             this.txbFoodId.Size = new System.Drawing.Size(101, 20);
             this.txbFoodId.TabIndex = 1;
+            this.txbFoodId.TextChanged += new System.EventHandler(this.txbFoodId_TextChanged);
             // 
             // lblTendangnhap
             // 
@@ -850,6 +851,7 @@
             this.btnEditFood.TabIndex = 3;
             this.btnEditFood.Text = "Sửa";
             this.btnEditFood.UseVisualStyleBackColor = true;
+            this.btnEditFood.Click += new System.EventHandler(this.btnEditFood_Click);
             // 
             // btnDeleteFood
             // 
@@ -860,6 +862,7 @@
             this.btnDeleteFood.TabIndex = 2;
             this.btnDeleteFood.Text = "Xóa";
             this.btnDeleteFood.UseVisualStyleBackColor = true;
+            this.btnDeleteFood.Click += new System.EventHandler(this.btnDeleteFood_Click);
             // 
             // btnAddFood
             // 
@@ -870,6 +873,7 @@
             this.btnAddFood.TabIndex = 1;
             this.btnAddFood.Text = "Thêm";
             this.btnAddFood.UseVisualStyleBackColor = true;
+            this.btnAddFood.Click += new System.EventHandler(this.btnAddFood_Click);
             // 
             // panel4
             // 
