@@ -15,20 +15,39 @@ namespace Winform
     public partial class fAdmin : Form
     {
         BindingSource foodList = new BindingSource();
+        BindingSource accountList = new BindingSource();
         public fAdmin()
         {
             InitializeComponent();
             Load();
         }
+        List<Food> SearchFoodByName(string name)
+        {
+            List<Food> listFood = FoodDAO.Instance.SearchFoodByName(name);
+            return listFood;
+        }
         void Load()
         {
             dtgvFood.DataSource = foodList;
+            dtgvAccount.DataSource = accountList;
 
             LoadDateTimePickerBill();
             LoadListBillByDate(dtpkFormDate.Value, dtpkFormDate.Value);
             LoadListFood();
+            LoadAccount();
             AddFoodBinding();
             LoadCategoryIntoCombobox(cbFoodCategory);
+            AddAccountBinding();
+        }
+        void AddAccountBinding()
+        {
+            txbUserName.DataBindings.Add(new Binding("Text", dtgvAccount.DataSource, "UserName", true, DataSourceUpdateMode.Never));
+            txbDisplayName.DataBindings.Add(new Binding("Text", dtgvAccount.DataSource, "DisplayName", true, DataSourceUpdateMode.Never));
+            txbAccountType.DataBindings.Add(new Binding("Text", dtgvAccount.DataSource, "Type", true, DataSourceUpdateMode.Never));
+        }
+        void LoadAccount()
+        {
+            accountList.DataSource = AccountDAO.Instance.GetListAccount();
         }
         void LoadDateTimePickerBill()
         {
@@ -65,27 +84,31 @@ namespace Winform
 
         private void txbFoodId_TextChanged(object sender, EventArgs e)
         {
-            if (dtgvFood.SelectedCells.Count > 0)
+            try
             {
-                int id = (int)dtgvFood.SelectedCells[0].OwningRow.Cells["CategoryID"].Value;
-
-
-                Category category = CategoryDAO.Instance.GetCategoryByID(id);
-                cbFoodCategory.SelectedItem = category;
-
-                int index = -1;
-                int i = 0;
-                foreach (Category item in cbFoodCategory.Items)
+                if (dtgvFood.SelectedCells.Count > 0)
                 {
-                    if (item.ID == category.ID)
+                    int id = (int)dtgvFood.SelectedCells[0].OwningRow.Cells["CategoryID"].Value;
+
+
+                    Category category = CategoryDAO.Instance.GetCategoryByID(id);
+                    cbFoodCategory.SelectedItem = category;
+
+                    int index = -1;
+                    int i = 0;
+                    foreach (Category item in cbFoodCategory.Items)
                     {
-                        index = i;
-                        break;
+                        if (item.ID == category.ID)
+                        {
+                            index = i;
+                            break;
+                        }
+                        i++;
                     }
-                    i++;
+                    cbFoodCategory.SelectedIndex = index;
                 }
-                cbFoodCategory.SelectedIndex = index;
             }
+            catch { }
         }
 
         private void btnAddFood_Click(object sender, EventArgs e)
@@ -158,6 +181,21 @@ namespace Winform
         {
             add { updateFood += value; }
             remove { updateFood -= value; }
+        }
+
+        private void btnSearchFood_Click(object sender, EventArgs e)
+        {
+            foodList.DataSource = SearchFoodByName(txbSearchFoodName.Text);
+        }
+
+        private void btnShowFood_Click(object sender, EventArgs e)
+        {
+            foodList.DataSource = FoodDAO.Instance.GetListFood();
+        }
+
+        private void btnShowAccount_Click(object sender, EventArgs e)
+        {
+            LoadAccount();
         }
     }
 }
